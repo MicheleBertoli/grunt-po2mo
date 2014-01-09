@@ -9,10 +9,15 @@ exports.po2mo = {
   files: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/fr.mo');
-    var expected = grunt.file.read('test/expected/fr.mo');
-    test.equal(actual, expected);
+    setTimeout(function() {
 
-    test.done();
+      var actual = grunt.file.read('tmp/fr.mo');
+      var expected = grunt.file.read('test/expected/fr.mo');
+      test.equal(actual, expected);
+
+      test.done();
+
+    }, 500);
+
   },
 };
