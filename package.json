@@ -15,12 +15,10 @@
   "bugs": {
     "url": "https://github.com/MicheleBertoli/grunt-po2mo/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/MicheleBertoli/grunt-po2mo/blob/master/LICENSE-MIT"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/MicheleBertoli/grunt-po2mo/blob/master/LICENSE-MIT"
+  }],
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
@@ -39,5 +37,8 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "dependencies": {
+    "sync-exec": "^0.4.0"
+  }
 }
