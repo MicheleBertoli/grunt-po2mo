@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MicheleBertoli/grunt-po2mo.svg)](https://travis-ci.org/MicheleBertoli/grunt-po2mo)
+
 # grunt-po2mo
 
 > Compile .po files into binary .mo files with msgfmt.
@@ -57,6 +59,3 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
