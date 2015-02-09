@@ -36,6 +36,14 @@ grunt.initConfig({
 })
 ```
 
+### Options
+
+#### options.deleteSrc
+Type: `Boolean`
+Default value: `false`
+
+Will delete the source .po file.
+
 ### Usage Examples
 
 ```js
@@ -52,8 +60,11 @@ grunt.initConfig({
 grunt.initConfig({
   po2mo: {
     files: {
-      src: 'languages/*.po',
-      expand: true,
+      options: {
+        deleteSrc: true
+      },
+      src: 'languages/fr.po',
+      dest: 'languages/fr.mo',
     },
   },
 })
