@@ -32,14 +32,18 @@ module.exports = function(grunt) {
     po2mo: {
       stage: {
         src: 'test/fixtures/fr.po',
-        dest: 'tmp/fr.mo',
+        dest: 'tmp',
       },
       prod: {
         options: {
           deleteSrc: true
         },
         src: 'tmp/fixtures/fr.po',
-        dest: 'tmp/fr.mo'
+        dest: 'tmp'
+      },
+      multiple: {
+        src: ['test/fixtures/*.po'],
+        dest: 'tmp',
       }
     },
 

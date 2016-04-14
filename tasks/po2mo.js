@@ -8,6 +8,7 @@
 
 'use strict';
 
+var path = require('path');
 var exec = require('sync-exec');
 
 module.exports = function(grunt) {
@@ -20,26 +21,29 @@ module.exports = function(grunt) {
 
     this.files.forEach(function(file) {
 
-      var src = file.src[0];
-      var dest = file.dest;
-      if (dest.indexOf('.po') > -1) {
-        dest = dest.replace('.po', '.mo');
-      }
-      grunt.file.write(dest);
+      file.src.forEach(function(src) {
 
-      var command = 'msgfmt -o ' + dest + ' ' + src;
+        var basename = path.basename(src);
+        basename = basename.replace('.po', '') + '.mo';
 
-      grunt.verbose.writeln('Executing: ' + command);
-      var result = exec(command);
-      grunt.verbose.writeln('Executed with status: ' + result.status);
+        var dest = path.join(file.dest, basename);
+        grunt.file.write(dest);
 
-      if (result.status !== 0) {
-        grunt.log.error(result.stderr);
-      }
+        var command = 'msgfmt -o ' + dest + ' ' + src;
 
-      if (options.deleteSrc) {
-        grunt.file.delete(src);
-      }
+        grunt.verbose.writeln('Executing: ' + command);
+        var result = exec(command);
+        grunt.verbose.writeln('Executed with status: ' + result.status);
+
+        if (result.status !== 0) {
+          grunt.log.error(result.stderr);
+        }
+
+        if (options.deleteSrc) {
+          grunt.file.delete(src);
+        }
+
+      });
 
     });
 

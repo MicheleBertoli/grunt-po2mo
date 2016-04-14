@@ -23,4 +23,17 @@ exports.po2mo = {
 
     test.done();
   },
+  multiple: function(test) {
+    test.expect(2);
+
+    var actual = grunt.file.read('tmp/fr.mo');
+    var expected = grunt.file.read('test/expected/fr.mo');
+    test.equal(actual, expected);
+
+    actual = grunt.file.read('tmp/it.mo');
+    expected = grunt.file.read('test/expected/it.mo');
+    test.equal(actual, expected);
+
+    test.done();
+  },
 };

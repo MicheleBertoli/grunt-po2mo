@@ -1,7 +1,7 @@
 {
   "name": "grunt-po2mo",
   "description": "Compile .po files into binary .mo files with msgfmt.",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/MicheleBertoli/grunt-po2mo",
   "author": {
     "name": "Michele Bertoli",
