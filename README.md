@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 [![Build Status](https://travis-ci.org/MicheleBertoli/grunt-po2mo.svg)](https://travis-ci.org/MicheleBertoli/grunt-po2mo)
 
 # grunt-po2mo
